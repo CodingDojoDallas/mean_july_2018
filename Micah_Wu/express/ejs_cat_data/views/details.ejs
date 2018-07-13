@@ -21,27 +21,32 @@
     .pad{
         padding: 10px;
     }
+    p{
+        margin: 20px;
+    }
 </style>
 </head>
 <body>
-    <div class="col-md-3 container" >
-        <div class="row justify-content-center">
-            <h1><%= cat.name >'s Detail Page :</h1>
+    <div class="container col-lg-4 justify-content center pad">
+        <div class="row justify-content-center pad">
+            <h1><%= cat.name %>'s Detail Page :</h1>
         </div>
         <div class="row justify-content-center">
-            <img src="../images/cat-lying-on-side.jpg" width="900">
+            <img src="../images/cat_1.jpg" width="500" height="350">
         </div>
-        <div class="row food">
-            <div class="food">Favorite Food: <%= cat.food %></div>
-        </div>
-        <div class="row age">
-            <div class="age">Age: <%= cat.age %></div>
-        </div>
-        <div class="row sleep">
-            <div class="sleep">Place they sleep:
-            <% for (var x in cat['sleeps']) { %>
-                <p><%= cat['sleeps'][x] %></p>
-            <% } %>
+        <div class="container pad spacey">
+            <div class="row food">
+                <div class="food left pad"><h1>Favorite Food: <%= cat.food %></h1></div>
+            </div>
+            <div class="row age">
+                <div class="age left pad"><h1>Age: <%= cat.age %></h1></div>
+            </div>
+            <div class="row sleep">
+                <div class="sleep left pad"><h1>Place they sleep:
+                <% for (var x in cat['sleeps']) { %>
+                    <p><%= cat['sleeps'][x] %></p>
+                <% } %></h1>
+                </div>
             </div>
         </div>
     </div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to Quoting Dojo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class ="justify-content-center">
+        <h1>Welcome to Quoting Dojo</h1>
+        <form class="form-inline my-2 my-lg-0" method="POST" action="/quote">
+            <label class="form-control mr-sm-2" for="Name">Name: </label>
+            <input class="form-control mr-sm-2" type="text" name="name"><br>
+            <label class="form-control mr-sm-2" for="quote">Your quote: </label>
+            <textarea class="form-control mr-sm-2" type="text" name="quote"></textarea>
+            <div>
+                <input class="btn btn-success btn-lg" type="submit" value="Add my Quote!">
+            </div>
+        </form>
+        <div>
+            <a class="btn btn-primary btn-lg" href="/quote">Skip to Quotes!</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
