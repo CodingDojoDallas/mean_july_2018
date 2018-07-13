@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survery Form</title>
+
+    <!-- BOOTSTRAP 4 -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+<style>
+    .btn-space{
+        margin: 10%;
+    }
+    .img-shift{
+        margin-left: -70%;
+        position: relative;
+         }
+    
+    input {
+        text-align: center;
+    }
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="width: 25rem;text-align:center; margin: 15% 35%;color:black;">
+            <img class="card-img-top img-shift" src="https://static1.squarespace.com/static/55085720e4b0813599644fae/t/594be6edd482e902e285a1fd/1498146572205/" alt="Card image cap">
+            <div class="card-body">
+                <hr>
+                <form action="/form" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Full Name: </label>
+                        <input type="text" class="form-control" id="name" placeholder="John Doe" name="Full-Name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Dojo Location: </label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="Location">
+                            <option>Silicon Valley</option>
+                            <option>Seattle</option>
+                            <option>Los Angeles</option>
+                            <option>Dallas</option>
+                            <option>Tysons Corner</option>
+                            <option>Chicago</option>
+                            <option>Tulsa</option>
+                            <option>East Bay</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Favorite Programming Language: </label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="Fav_lang">
+                            <option>HTML</option>
+                            <option>CSS</option>
+                            <option>JAVASCRIPT</option>
+                            <option>PYTHON</option>
+                            <option>RUBY</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1" >Comment (optional): </label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="Comment" ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mb-2">
+                        SUMBIT
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
