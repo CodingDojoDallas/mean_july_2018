@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Counter</title>
+
+    <!-- Required CSS Files [ BOOTSTRAP 4 ] -->
+    <link rel="stylesheet" href="css/Bootstrap4.css">
+    <link rel="stylesheet" href="css/Bootstrap4.min.css">
+    <link rel="stylesheet" href="css/btmin.css.css">
+
+    <style>
+      .counter   { font-size:8vw; margin: 5rem auto; color: #1d1717a1; }
+      .btn-lg    { padding: .5rem 5rem; }
+      .jumbotron {
+         padding: 0;
+         margin: 0;
+         min-height: 100vh;
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-image: url("imgs/wooden.jpg");
+      }
+      .inliner { display: flex; justify-content: space-around; }
+    </style>
+</head>
+
+<body>
+   <div class="jumbotron">
+      <div class="container">
+         <div style="text-align:center; color:black;">
+            <h1 class="counter">COUNTER</h1>
+            <hr style="width:35%; background: #0000002e;">
+            <h1>You"ve visited this site</h1>
+            <div>
+                <h2 class="counter"><%=count%> Times</h2>
+            </div>
+            <div class="container">
+               <div class="row justify-content-md-center inliner">
+                  <div class="col">
+                     <form action="/dub" method="post">
+                        <input type="submit" class="btn btn-lg btn-success" value="Add 2">
+                     </form>
+                  </div>
+                  <div class="col inliner">
+                     <form action="/reset" method="post">
+                         <input type="submit" class="btn btn-lg btn-danger" value="Reset">
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+   <head>
+      <title>Cat Details</title>
+      <meta charset="UTF-8">
+      <!-- css -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One|Montserrat|Open+Sans|Poiret+One">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="/css/btmin.css">
+
+      <!-- javascript -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   </head>
+
+   <body id="details">
+      <!-- Header/navbar container -->
+
+
+      <!-- Main Container -->
+      <img class="d-block w-100" src="<%=cat.image%>" width="100vw" height="450vh" alt="">
+      <div class="container shrink">
+         <h4 class="row justify-content-center"><h1 class="cat-header">Details Page for <span><%= cat.name %></span></h1></h4>
+         <h1 class="row justify-content-center"><img class="d-block w-100" src="<%=cat.image%>" width="100vw" height="450vh" alt=""></h1>
+         <h4 class="row flexed">
+            <p class="p-label p-tag">Favorite food: </p>
+            <p class="p-tag"><%= cat.food %></p>
+         </h4>
+         <h4 class="row flexed">
+            <p class="p-label p-tag">Age: </p>
+            <p class="p-tag"> <%= cat.age %> years old</p>
+         </h4>
+         <h4 class="row flexed">
+            <p class="p-label p-tag">Place they sleep:</b></p>
+            <ul style="width:21rem;">
+               <% for (var index in cat.favoritespots { %>
+               <li><%= cat.favoritespots[index] %></li>
+               <% } %>
+            </ul>
+         </h4>
+       </div>
+   </body>
+</html>
