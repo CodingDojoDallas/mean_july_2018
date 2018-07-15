@@ -16,9 +16,6 @@ app.get("/cars", function (request, response){
     {name:'porsche.jpg'},
     {name:'rsti.jpg'},
     {name:'rx7.jpg'},
-    // JOSH: I'm going to add some stuff here
-    {name:'isdvhdihvldnvdln/lnc'}
-    {name:'ummmmmmhmmmmmmm'}
   ]
 
   response.render('cars', {files: files_name});
