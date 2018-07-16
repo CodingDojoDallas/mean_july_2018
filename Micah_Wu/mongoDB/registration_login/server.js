@@ -61,6 +61,29 @@ app.get('/mongooses/edit/:id', function(req, res) {
   })
 })
 
+app.post('/mongooses/:id', function(req, res) {
+  console.log("POST DATA", req.body);
+  User.findOne({_id:req.params.id}, function(err, user){
+    if(err) { console.log('something went wrong'); }
+    else {
+      user.animal = req.body.animal;
+      user.name = req.body.name;
+      user.description = req.body.description;
+      user.date = req.body.date;
+      console.log(user)
+
+      user.save(function(err){
+        if (err) console.log("failure")
+        else       console.log("success")
+      })
+      console.log(user)
+    }
+  })
+  res.redirect('/');
+})
+
+// User.update({_id:req.params.id},{$push: {animal: req.body.animal, name: req.body.name, description: req.body.description, date:req.body.date}}, function(err){});
+
 app.get('/mongooses/destroy/:id', function(req, res) {
   User.remove({_id:req.params.id}, function(err, data) {
     res.redirect('/')
