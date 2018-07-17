@@ -11,7 +11,9 @@ nodemon server.js  # Start project server.
 mkdir express_project_name # Create directory for new project.
 npm init -y   # Set up empty package.json file.
 ```
+
 Install necessary packages using npm
+
 
 Set up server section of project:
 ```bash
@@ -39,7 +41,8 @@ ng g s name_of_service
 ```
 Add to `app/app.module.ts`
 ```javascript
-import { Name_of_serviceService } from ./name_of_service.service;
+import { HttpClientModule } from '@angular/common/http';
+import { Name_of_serviceService } from './name_of_service.service';
 Name_of_serviceService // providers array.
 HttpClientModule // imports
 ```
