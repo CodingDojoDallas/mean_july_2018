@@ -1,0 +1,55 @@
+<p>This will be a form</p>
+
+<form (submit)="onSubmit($event)">
+    <input
+        type="text"
+        name="title"
+        [(ngModel)]="task.title"
+        #title="ngModel"
+        required
+        minlength="2"
+    />
+    <!-- BACKEND VALIDATIONS -->
+    <small *ngIf="errors.title">{{ errors.title.message }}</small>
+
+    <!-- FRONT END VALIDATIONS -->
+    {{ title.errors | json }}
+============ OR ===================
+    <small
+        *ngIf="title.invalid"
+    >Fix errors before proceeding</small>
+
+    <input
+        type="text"
+        name="description"
+        [(ngModel)]="task.description"
+    />
+    <small *ngIf="errors.description">{{ errors.description.message }}</small>
+
+    <button>Create</button>
+</form>
+
+
+===========================================
+<!-- BACKEND VALIDATION -->
+
+constructor(private _taskService: TaskService) {}
+ngOnInit() {
+    this.task = new Task();
+    this,errors = [];
+}
+onSubmit(e) {
+    e.preventDefault(); <!-- ($event) from form -->
+    let observable = this._taskService.create(this.task);
+    observable.subscribe(
+        <!-- Callback  -->
+        (task) => {
+            console.log(task);
+        },
+        <!-- Errorback -->
+        (err) => {
+            this.errors = err.error;
+            console.log(this.errors);
+        }
+    )
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <!-- link for JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Boostrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+         crossorigin="anonymous">
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <div class="container">
+            <h5><a href="/logout" class="float-right">Logout</a></h5>
+            <h1 class="text-capitalize">Hello <%= user.first_name %> <%= user.last_name %></h1>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <title>Quotes</title>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Here are the awesome quotes!</h2>
+            <div class="container form-control table-responsive">
+                <ul>
+                    <% for (var idx in quotes){ %>
+                        <h5 class="blockquote">"<%=quotes[idx].quote %>"</h5>
+                        <ul>
+                        <p class="blockquote-footer text-capitalize">
+                            <%= quotes[idx].name %>
+                            <%= quotes[idx].created_at %>
+                        </p>
+                        </ul>
+                    <% } %>
+                </ul>
+            </div>
+            <button class="btn btn-outline-dark"><a href="/">Add another quote!</a></button>
+        </div>
+    </body>
+</html>
