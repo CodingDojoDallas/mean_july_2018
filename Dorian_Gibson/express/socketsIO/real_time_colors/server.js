@@ -29,7 +29,7 @@ io.sockets.on('connection', (socket) => {
     console.log("\n=> Client/socket is connected!");
     console.log("=> Client/socket id is: ", socket.id); 
   
-    // socket.emit('color', data);
+    // socket.emit('color', data = 'white');
     socket.on('button', function (data) {
         socket.emit('color', data);
         socket.broadcast.emit('color', data);
