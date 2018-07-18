@@ -44,5 +44,5 @@ io.sockets.on('connection', (socket) => {
         socket.broadcast.emit('counted', counter);
     });
       
-    // socket.on('disconnect', () => { console.log('Client has disconnected'); });
+    socket.on('disconnect', () => { console.log('Client has disconnected'); });
 }); 
