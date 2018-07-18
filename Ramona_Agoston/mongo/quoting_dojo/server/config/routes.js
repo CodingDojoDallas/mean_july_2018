@@ -1,6 +1,6 @@
 //require mongoose for db and load schema into Quote
-var mongoose = require('mongoose')
-var Quote = mongoose.model("Quote")
+var mongoose = require('mongoose');
+// var Quote = mongoose.model('Quote', QuoteSchema);
 
 //require logic controllers
 const control = require('../controllers/quotes.js');
