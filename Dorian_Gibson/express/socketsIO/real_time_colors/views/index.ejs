@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href='../static/css/bootstrap.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+        $(document).ready(function (){
+    
+            var socket = io();
+
+            $('button').click(function(x){
+                x.preventDefault();
+                console.log(this.value);
+                var data = this.value;
+                socket.emit('button', data);
+            });
+
+            socket.on('color', (data) => {
+                var response = data;
+                $('body').css('background-color', data);
+            });
+        })
+    </script>
+    <title>Button</title>
+</head>
+<body class=''>
+    <div class="container">
+        <div class="row Absolute-Center is-Responsive">
+            <button value='red' type="submit" class="btn btn-outline-dark btn-sm">Red</button>
+            <button value='blue' type="submit" class="btn btn-outline-dark btn-sm">Blue</button>
+            <button value='green' type="submit" class="btn btn-outline-dark btn-sm">Green</button>
+        </div>
+    </div>
+</body>
+</html>
