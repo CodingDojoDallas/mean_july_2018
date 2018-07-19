@@ -10,7 +10,7 @@ app.set('views', __dirname + '/views');
 // Now lets set the view engine itself so that express knows that we are using ejs as opposed to another templating engine like jade
 app.set('view engine', 'ejs');
 
-app.get("/losers", function (request, response){
+app.get("/", function (request, response){
   // hard-coded user data
   var users_array = [
       {name: "Michael", email: "michael@codingdojo.com"}, 

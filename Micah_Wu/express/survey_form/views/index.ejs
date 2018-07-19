@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <style>
+        h1{
+            text-align: center;
+        }
+        body{
+            background-color:black;
+            color:azure;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justfiy-content-center">
+            <h1>Survey Form</h1>
+        </div>
+        
+            <form class="col-md-8" action="/result" method="POST">
+                <div class="form-row form-group">
+                    <div class="form-group col-md-3">
+                        <label class="labels" for="name">Name:</label>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input name="name" type="text" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-row form-group">
+                    <label for="" class="col-3">Dojo Location:</label>
+                    <select class="form-control col-6" name="location" id="">
+                        <option>Dallas</option>
+                        <option>California</option>
+                        <option>Colorado</option>
+                        <option>Washington</option>
+                    </select>
+                </div>
+
+                <div class="form-row form-group">
+                    <label for="" class="col-3">Favorite Language:</label>
+                    <select class="form-control col-6" name="language" id="">
+                        <option>Python<option>
+                        <option>JS<option>
+                        <option>SQL<option>
+                        <option>C++<option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                    <label class="labels" for="comment">Comment (optional):</label>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <textarea name="comment" class="form-control" placeholder="Enter Text Here" rows="6" cols="40"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="float-right btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
