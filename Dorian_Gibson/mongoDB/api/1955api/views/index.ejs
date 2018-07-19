@@ -11,6 +11,24 @@
     <title>1955</title>
 </head>
 <body style="font-family: 'Playfair Display', serif;">
-
+    <div class="card">
+        <div class="row">
+            <form class="col-8" action="/new/:name/:job" method="POST">
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Name:</label>
+                    <div class="col-sm-9">
+                        <input name="name" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Job:</label>
+                    <div class="col-sm-9">
+                        <textarea name="job" cols="30" rows="5"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
