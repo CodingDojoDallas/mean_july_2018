@@ -7,4 +7,5 @@ var QuoteSchema = new mongoose.Schema({
     created_at: {type: Date}
 }, { timestamps: true });
 
-module.exports = mongoose.model('Quote', QuoteSchema);
+var Quote = mongoose.model('Quote', QuoteSchema);
+module.exports = Quote

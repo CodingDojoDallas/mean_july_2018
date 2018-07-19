@@ -1,5 +1,7 @@
 //require mongoose for db and load schema into Quote
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
+var Quote = require('../models/quote')
+
 
 //define and export routes to server.js
 module.exports = {
