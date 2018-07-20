@@ -15,7 +15,7 @@ export class AppComponent {
   constructor(private _http:HttpService){}
 
   ngOnInit(){
-    this.getAnimalsFromService()
+    // this.getAnimalsFromService()
   }
 
   getAnimalsFromService(){
@@ -24,14 +24,13 @@ export class AppComponent {
       console.log(data);
       this.animals = data['animals'];
     });
-}
-
-  // getAnimalFromService(id){
-  //   let observable = this._http.getAnimal(id);
-  //   observable.subscribe(data=>{
-  //     console.log(data);
-  //     this.animal = data['animal'];
-  //   });
-  // }
-
+  }
+  
+  getAnimalFromService(id){
+    let observable = this._http.getAnimal(id);
+    observable.subscribe(data=>{
+      console.log(data);
+      this.animal = data['animal'];
+    });
+  }
 }
