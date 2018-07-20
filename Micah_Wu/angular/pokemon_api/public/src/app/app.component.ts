@@ -9,6 +9,6 @@ import { HttpService } from './http.service';
 export class AppComponent {
   title = 'Pokemon API';
   constructor(private _httpService: HttpService){
+
   }
-  
 }
