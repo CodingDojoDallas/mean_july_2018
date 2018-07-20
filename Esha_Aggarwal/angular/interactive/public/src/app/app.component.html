@@ -1,0 +1,5 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+  <button (click)="getNamesFromService()">Get names!</button> 
+    <p *ngFor="let i of quotes"> {{ i.name }}<button (click)='getQuoteFromService(i._id)' *ngIf='i.name'>Show</button></p>
+    <p *ngIf='onequote'>{{ onequote['quote']  }} {{onequote.name }}</p>

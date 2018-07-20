@@ -9,7 +9,7 @@ var server = http.createServer(function (request, response){
     // this is how we do routing:
     if(request.url === '/cars') {
         fs.readFile('images/car1.jpeg', 'utf8', function (errors, contents){
-            response.writeHead(200, {'Content-Type': 'text/html'});  // send data about response
+            response.writeHead(200, {'Content-Type': 'image/jpg'});  // send data about response
             response.write(contents);  //  send response body
             response.end(); // finished!
         });
