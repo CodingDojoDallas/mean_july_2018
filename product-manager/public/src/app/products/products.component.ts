@@ -27,6 +27,7 @@ export class ProductsComponent implements OnInit {
     productObservable.subscribe(
       // this is the callback function
       (products_data) => {
+      console.log(products_data);
       this.products = products_data['data'];
     });
   }

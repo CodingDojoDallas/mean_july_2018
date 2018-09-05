@@ -3,13 +3,12 @@ var Product = require('../models/product_model');
 module.exports = {
 
   products: function(req, res){
-
     Product.find({}, (err, products) => {
       if (err) {
         res.json({'message': 'error', 'errors': ['Couldnt Product.find()']});
       }
       else {
-        res.json({'message': 'success', 'data': products});
+        res.json(products);
       }
     });
   },
