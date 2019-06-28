@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <title></title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome to QuotingDojo</h1>
+            <% if(typeof(errors) != 'undefined'){ %>
+                <% for (var x in errors) { %>
+                    <p><%= errors[x].message %></p>
+                    <% } %>
+                <% } %>
+            <form action="add_quote" method="post">
+                <p>Your Name: <input type="text" name="name"></p>
+                <p>Your Quote: <textarea name="quote" rows="8" cols="80"></textarea></p>
+                <button type="submit" class="btn btn-outline-dark" name="add_quote">Add my quote!</button>
+            </form>
+            <button class="btn btn-outline-dark"><a href="/quotes">Skip to quotes!</a></button>
+        </div>
+    </body>
+</html>

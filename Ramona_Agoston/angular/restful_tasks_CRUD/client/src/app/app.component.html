@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="col-12">
+        <h1>Restful Tasks API</h1>
+
+        <button type="button" class="btn btn-dark btn-md" (click)="getTasks()">Get all Tasks</button>
+
+        <div *ngFor="let task of tasks">
+            <p>{{ task.title }} - {{ task.description }}</p>
+            <button type="button" class="btn btn-success btn-sm" (click)="edit(task)">Edit</button>
+            <button type="button" class="btn btn-danger btn-sm" (click)="delete(task)">Delete</button>
+        </div>
+    </div>
+    <div class="col-12">
+
+        <div>
+            <form (submit)="onEdit(thisTask, $event)">
+                <label for="title"><u>Edit Task Title:</u></label>
+                <input type="text" name="thisTask.title" [(ngModel)]="thisTask.title" [value]="thisTask.title">
+
+                <label for="description"><u>Edit Task Description:</u></label>
+                <input type="text" name="thisTask.description" [(ngModel)]="thisTask.description" [value]="thisTask.description">
+
+                <button type="button" class="btn btn-success btn-sm" type="submit" value="Edit Task">Edit Task</button>
+            </form>
+        </div>
+
+        <div>
+            <form (submit)="onSubmit()">
+                <p>{{ newTask | json }}</p>
+                <label for="title"><u>Creat Task Title:</u></label>
+                <input type="text" name="newTask.title" [(ngModel)]="newTask.title">
+
+                <label for="description"><u>Create Task Description:</u></label>
+                <input type="text" name="newTask.description" [(ngModel)]="newTask.description">
+
+                <button type="button" class="btn btn-info btn-sm" type="submit" value="Create New Task">Create New Task</button>
+            </form>
+        </div>
+
+    </div>
+</div>
