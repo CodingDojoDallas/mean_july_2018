@@ -11,7 +11,9 @@ nodemon server.js  # Start project server.
 mkdir express_project_name # Create directory for new project.
 npm init -y   # Set up empty package.json file.
 ```
+
 Install necessary packages using npm
+
 
 Set up server section of project:
 ```bash
@@ -37,24 +39,29 @@ From Angular app directory:
 ```bash
 ng g s name_of_service
 ```
-Add to `app/app.module.ts`
+Add service to `app/app.module.ts`
 ```javascript
-import { Name_of_serviceService } from ./name_of_service.service;
-Name_of_serviceService // providers array.
-HttpClientModule // imports
+import { Name_of_serviceService } from './name_of_service.service';
+Name_of_serviceService // add to providers array.
 ```
-
-Add to `name_of_service.service.ts`
+Add `HttpClientModule` to `app/app.module.ts` to allow for Http requests:
 ```javascript
-import HttpClient from '@angular/common/http';
-constructor(private _http: HttpClient) {} // Set up private attribute to use HttpClient. Added to Name_of_serviceService class.
+import { HttpClientModule } from '@angular/common/http';
+HttpClientModule // add to imports array
 ```
 
 Add to `app.component.ts`:
 ```javascript
 import { Name_of_serviceService } from './name_of_service.service'
 constructor(private _name_of_serviceService: Name_of_serviceService) {}
+  ```
+
+Add to `name_of_service.service.ts`
+```javascript
+import { HttpClient } from '@angular/common/http';
+constructor(private _http: HttpClient) {} // Set up private attribute to use HttpClient. Added to Name_of_serviceService class.
 ```
+
 ### Create, and subscribe to, Angular Observable
 Add this method to `Name_of_serviceService` class in `name_of_service.service.ts`
 ```javascript
